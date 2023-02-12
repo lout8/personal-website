@@ -14,6 +14,7 @@ export const FooterMain = styled.footer`
     height: auto;
     z-index: 999;
     background: #20262E;
+    margin-top: 20vh;
    
 `
 export const FooterContainer = styled.div`

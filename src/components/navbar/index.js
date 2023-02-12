@@ -13,7 +13,6 @@ const Navbar = ({toggle, isOpen}) => {
                 <NavMenu>
                     <NavItem><NavLinks to="about" >about</NavLinks></NavItem>
                     <NavItem><NavLinks to="projects">projects</NavLinks></NavItem>
-                    <NavItem><NavLinks to="blog">blog</NavLinks></NavItem>
                     <NavItem><NavLinks to="contact">contact</NavLinks></NavItem>
                 </NavMenu>
                 <NavMenu>

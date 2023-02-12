@@ -6,8 +6,8 @@ export const Project = styled.div`
     display: flex;
     flex-direction: column;
     min-width: 100%;
-    min-height: 100vh;
-    padding: 100px 150px;
+    min-height: 80vh;
+    padding: 150px 150px;
 
   @media only screen and (max-width: 1200px) {
     padding: 100px 100px;
@@ -22,14 +22,14 @@ export const Project = styled.div`
     padding: 75px 25px;
   }
 `
-export const ProjectContainerTitle = styled.div`
+export const ProjectContainerH = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     height: 100%;
 `
-export const ProjectTitle = styled.h1`
+export const ProjectH = styled.h1`
   display: flex;
   color: #EBEBEB;
   font-size: 3.5rem;
@@ -41,28 +41,27 @@ export const ProjectTitle = styled.h1`
     font-size: 2.5rem;
   }
 `
-export const ProjectBody = styled.p`
+export const ProjectP = styled.p`
   display: flex;
-  color: white;
   color: #D19EEB;
   font-size: 1.4rem;
-  padding: 5px 0 100px 5px;
+  padding: 25px 0 150px 5px;
 
-@media only screen and (max-width: 1200px) {
-  padding-bottom: 100px;
-}
-@media only screen and (max-width: 1024px) {
-  font-size: 1.3rem;
-  padding-bottom: 100px;
-}
-@media only screen and (max-width: 900px) {
-  font-size: 1.2rem;
-  padding-bottom: 75px;
-}
-@media only screen and (max-width: 768px) {
-  font-size: 1rem;
-  padding-bottom: 75px;
-}
+  @media only screen and (max-width: 1200px) {
+    padding-bottom: 100px;
+  }
+  @media only screen and (max-width: 1024px) {
+    font-size: 1.3rem;
+    padding-bottom: 100px;
+  }
+  @media only screen and (max-width: 900px) {
+    font-size: 1.2rem;
+    padding-bottom: 75px;
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: 1rem;
+    padding-bottom: 75px;
+  }
 `
 export const ProjectMenuContainer = styled.div`
     display: flex;  

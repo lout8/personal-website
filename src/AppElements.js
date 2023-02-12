@@ -6,7 +6,8 @@ export const GlobalMainBody = createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: monospace;
+        /* font-family: monospace; */
+        font-family: 'Courier New', Courier, monospace;
         
     }
     body{

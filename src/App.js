@@ -8,7 +8,9 @@ import Sidebar from './components/sidebar'
 import Footer from './components/footer'
 //Pages
 import HomePage from './pages/home'
+import AboutPage from './pages/about'
 import ProjectPage from './pages/projects'
+import ContactPage from './pages/contact'
 
 function App() {
   // Sidebar Button
@@ -29,7 +31,9 @@ function App() {
         </header>
         <Routes>
           <Route exact path="/" element={<HomePage/>}/>
+          <Route exact path="/about" element={<AboutPage/>}/>
           <Route exact path="/projects" element={<ProjectPage/>}/>
+          <Route exact path="/contact" element={<ContactPage/>}/>
         </Routes>
         <footer><Footer/></footer>
       </HashRouter>

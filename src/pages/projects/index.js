@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Project, ProjectContainerTitle, ProjectTitle, ProjectBody, ProjectMenuContainer, ProjectMenuTitle, ProjectMenuListContainer, 
+import { Project, ProjectContainerH, ProjectH, ProjectP, ProjectMenuContainer, ProjectMenuTitle, ProjectMenuListContainer, 
   ProjectMenuDesciptionContainer, 
   ProjectMenuList,
   ProjectMenuListLinksButton,
@@ -19,10 +19,10 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
   return (
     <Project>
-      <ProjectContainerTitle>
-        <ProjectTitle>Projects</ProjectTitle>
-        <ProjectBody>A list of projects I've worked on</ProjectBody>
-      </ProjectContainerTitle>
+      <ProjectContainerH>
+        <ProjectH>Projects</ProjectH>
+        <ProjectP>A list of projects I've worked on</ProjectP>
+      </ProjectContainerH>
         <ProjectMenuContainer>
           <ProjectMenuTitle>
             <ProjectMenuList className='yearTitle'>Year</ProjectMenuList>
