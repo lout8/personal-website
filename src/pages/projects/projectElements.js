@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
 
 export const Project = styled.div`
@@ -43,7 +42,7 @@ export const ProjectH = styled.h1`
 `
 export const ProjectP = styled.p`
   display: flex;
-  color: #D19EEB;
+  color: #B5B5B5;
   font-size: 1.4rem;
   padding: 25px 0 150px 5px;
 
@@ -80,30 +79,19 @@ export const ProjectMenuTitle = styled.div`
     background: #20262E;
     border-radius: 5px;
 `
-export const ProjectMenulistIconDown = styled(IoMdArrowDropdown)`
-  color: #B5B5B5;
-  font-size: 2rem;
-  position: absolute;
-  @media only screen and (max-width: 768px) {
-    font-size: 1.5rem;
-  }
+export const ProjectMenuListMainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `
-export const ProjectMenulistIconUp = styled(IoMdArrowDropup)`
-  color: #B5B5B5;
-  font-size: 2rem;
-  position: absolute;
-  @media only screen and (max-width: 768px) {
-    font-size: 1.5rem;
-  }
-`
-
 export const ProjectMenuListContainer = styled.div`
     display: flex;
+    order: 0;
     flex-direction: row;
     align-items: center;
     height: 60px;
     width: 100%;
     cursor: pointer;
+    background: ${({isProjectOpen, id, ProjectID}) => (isProjectOpen&& id == ProjectID  ? 'rgba(0, 0, 0, 0.2)' : 'none')};
 
     &:hover{
         background-color: rgba(0, 0, 0, 0.2);
@@ -112,30 +100,22 @@ export const ProjectMenuListContainer = styled.div`
         -o-transition: 0.5s;
         transition: 0.5s;
     }
-     &:hover ${ProjectMenulistIconDown}, ${ProjectMenulistIconUp}{
-      color: #D19EEB;
-      -webkit-transition: 0.5s;
-      -moz-transition: 0.5s;
-      -o-transition: 0.5s;
-      transition: 0.5s;
-    }
-    background: ${({ isProjectOpen }) => (isProjectOpen ? 'rgba(0, 0, 0, 0.2)' : 'none')};
 `
 export const ProjectMenuDesciptionContainer = styled.div`
-  position: relative;
+  position: sticky;
+  order: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   height: auto;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  max-height: ${({ isProjectOpen, id, ProjectID }) => (isProjectOpen && id == ProjectID ? '400px' : '0')};
 
   -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
-
-   max-height: ${({ isProjectOpen }) => (isProjectOpen ? '400px' : '0')};
 `
 export const ProjectMenuList = styled.div`
   &.yearTitle{
@@ -160,6 +140,17 @@ export const ProjectMenuList = styled.div`
     padding: 0 20px;
     color: #E9E8E8; 
     font-size: 1.15rem;
+  }
+  &.iconTitle{
+    flex: auto 1 1;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    color: #20262E;
+    font-size: 2rem;
+    @media only screen and (max-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
   &.year{
     flex: 100px 0 1;
@@ -195,6 +186,7 @@ export const ProjectMenuList = styled.div`
   &.toolsDescripton{
     display: none;
     height: auto;
+    text-align: center;
     justify-content: center;
     align-items: center;
     padding: 0 100px 20px 100px;
@@ -204,18 +196,36 @@ export const ProjectMenuList = styled.div`
   &.link{
     display: flex;
     flex-direction: row;
+    text-align: center;
     align-items: center;
     justify-content: center;
     height: auto;
     padding: 0 100px 20px 100px;
     color: #EBEBEB;
   }
-  &.icon{
+  &.iconUp{
     flex: auto 1 1;
-    display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 0 20px;
+    color: #B5B5B5;
+    font-size: 2rem;
+    @media only screen and (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+    display: ${({ isProjectOpen }) => (isProjectOpen ? 'flex' : 'none')};
+  }
+  &.iconDown{
+    flex: auto 1 1;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    color: #B5B5B5;
+    font-size: 2rem;
+    @media only screen and (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+    display: ${({ isProjectOpen }) => (isProjectOpen ? 'none' : 'flex')};
   }
   @media only screen and (max-width: 750px){
     &.description{
@@ -267,7 +277,7 @@ export const ProjectMenuListLinksButton = styled.a`
   justify-content: center;
   text-decoration: none;
   cursor: pointer;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   padding: 0 5px;
   color: #EBEBEB;
   z-index: 997;
@@ -279,7 +289,7 @@ export const ProjectMenuListLinksButton = styled.a`
     transition: 0.5s;
   }
   @media only screen and (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   
 

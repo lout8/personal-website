@@ -1,22 +1,55 @@
 import React, {useState} from 'react'
-import { Project, ProjectContainerH, ProjectH, ProjectP, ProjectMenuContainer, ProjectMenuTitle, ProjectMenuListContainer, 
+import { Project, ProjectContainerH, ProjectH, ProjectP, ProjectMenuListMainContainer, ProjectMenuContainer, ProjectMenuTitle, ProjectMenuListContainer, 
   ProjectMenuDesciptionContainer, 
   ProjectMenuList,
-  ProjectMenuListLinksButton,
-  ProjectMenulistIconDown,
-ProjectMenulistIconUp } from './projectElements'
+  ProjectMenuListLinksButton, OK} from './projectElements'
 
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
-  const ProjectPage = () => {
+const ProjectPage = ({data}) => {
 
+  const ProjectComponents = ({ id, year, title, built, description, link}) =>{
 
-  const[isProjectOpen, setIsProjectOpen] = useState(false)
+    const[dropDown, setDropDown] = useState(false)
+    const[isProjectOpen, setIsProjectOpen] = useState(false)
 
-  const projectToggle = () => {
-    setIsProjectOpen(!isProjectOpen)
+    const[projectID, setProjectID] = useState(id)
+    const[projectYear, setProjectYear] = useState(year)
+    const[projectTitle, setProjectTitle] = useState(title)
+    const[projectBuilt, setProjectBuilt] = useState(built)
+    const[projectDescription, setProjectDescription] = useState(description)
+    const[projectLink, setProjectLink] = useState(link)
+
+    //icons
+    const[githubIcon, setgithubIcon] = useState(FaGithub)
+    const[externalLink, setexternalLink] = useState(FaExternalLinkAlt)
+
+    return(
+      <ProjectMenuListMainContainer key={projectID}>
+      <ProjectMenuListContainer isProjectOpen={isProjectOpen} onClick={() => setIsProjectOpen(!isProjectOpen)}>
+        <ProjectMenuList className='year'>{projectYear}</ProjectMenuList>
+        <ProjectMenuList className='title'>{projectTitle}</ProjectMenuList>
+        <ProjectMenuList className='tools'>{projectBuilt}</ProjectMenuList>
+        <ProjectMenuList className='iconUp' isProjectOpen={isProjectOpen}><IoMdArrowDropup/></ProjectMenuList> 
+        <ProjectMenuList className='iconDown' isProjectOpen={isProjectOpen}><IoMdArrowDropdown/></ProjectMenuList>
+      </ProjectMenuListContainer>
+      <ProjectMenuDesciptionContainer isProjectOpen={isProjectOpen}>
+        <ProjectMenuList className='description'>{projectDescription}</ProjectMenuList>
+        <ProjectMenuList className='toolsDescripton'>{projectBuilt}</ProjectMenuList>
+        <ProjectMenuList className='link'>
+        {projectLink.map(({linkid, linkURL}) =>{
+          return(
+            <ProjectMenuListLinksButton key={linkid} href={linkURL} target="_blank" rel="noopener noreferrer">{ linkid == 1 ? externalLink : githubIcon}</ProjectMenuListLinksButton>
+          );
+          })} 
+          </ProjectMenuList>
+      </ProjectMenuDesciptionContainer>
+      </ProjectMenuListMainContainer>
+    );
+
+    
   }
-
   return (
     <Project>
       <ProjectContainerH>
@@ -28,26 +61,14 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
             <ProjectMenuList className='yearTitle'>Year</ProjectMenuList>
             <ProjectMenuList className='titleTitle'>Title</ProjectMenuList>
             <ProjectMenuList className='toolsTitle'>Built with</ProjectMenuList>
-            <ProjectMenuList className='icon'></ProjectMenuList>
+            <ProjectMenuList className='iconTitle'><IoMdArrowDropup/></ProjectMenuList>
           </ProjectMenuTitle>
-          <ProjectMenuListContainer isProjectOpen={isProjectOpen} onClick={projectToggle}>
-            <ProjectMenuList className='year'>2023</ProjectMenuList>
-            <ProjectMenuList className='title'>Personal Website of this icon and this</ProjectMenuList>
-            <ProjectMenuList className='tools'>React CSS HTML</ProjectMenuList>
-            <>{!isProjectOpen
-              ?<ProjectMenuList className='icon' ><ProjectMenulistIconDown></ProjectMenulistIconDown></ProjectMenuList> 
-              :<ProjectMenuList className='icon' ><ProjectMenulistIconUp></ProjectMenulistIconUp></ProjectMenuList>
-            }</>
-          </ProjectMenuListContainer>
-          <ProjectMenuDesciptionContainer isProjectOpen={isProjectOpen}>
-              <ProjectMenuList className='description'>This is a description of the project that i have made. This app does this and this and this and so on on. At the end does this and this shit fuck me</ProjectMenuList>
-              <ProjectMenuList className='toolsDescripton'>React CSS HTML</ProjectMenuList>
-              <ProjectMenuList className='link'>
-                <ProjectMenuListLinksButton href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FaGithub/></ProjectMenuListLinksButton>
-                <ProjectMenuListLinksButton href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin/></ProjectMenuListLinksButton>
-              </ProjectMenuList>
-          </ProjectMenuDesciptionContainer>
         </ProjectMenuContainer>
+        {data.project&&data.project.map(({id, year, title, built, description, link}) =>{
+            return(
+              <ProjectComponents key={id} id={id} year={year} title={title} built={built} description={description} link={link} />
+            );
+        })}
     </Project>
   )
 }

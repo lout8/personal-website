@@ -11,13 +11,13 @@ const Navbar = ({toggle, isOpen}) => {
                 <NavSidebarButton isOpen={isOpen} onClick={toggle}><HiBars3/></NavSidebarButton>
                 <NavXmarkButton isOpen={isOpen} onClick={toggle}><HiXMark/></NavXmarkButton>
                 <NavMenu>
-                    <NavItem><NavLinks to="about" >about</NavLinks></NavItem>
-                    <NavItem><NavLinks to="projects">projects</NavLinks></NavItem>
-                    <NavItem><NavLinks to="contact">contact</NavLinks></NavItem>
+                    <NavItem><NavLinks to="/about" >about</NavLinks></NavItem>
+                    <NavItem><NavLinks to="/projects">projects</NavLinks></NavItem>
+                    <NavItem><NavLinks to="/contact">contact</NavLinks></NavItem>
                 </NavMenu>
                 <NavMenu>
-                    <NavItem><NavMedia href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin/></NavMedia></NavItem>
-                    <NavItem><NavMedia href="https://www.github.com" target="_blank" rel="noopener noreferrer"><FaGithub/></NavMedia></NavItem>
+                    <NavItem><NavMedia href="https://www.linkedin.com/in/elissaios-loutos-695024227/" target="_blank" rel="noopener noreferrer"><FaLinkedin/></NavMedia></NavItem>
+                    <NavItem><NavMedia href="https://github.com/lout8" target="_blank" rel="noopener noreferrer"><FaGithub/></NavMedia></NavItem>
                 </NavMenu>
             </NavContainer>
         </Nav>

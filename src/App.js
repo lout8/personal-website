@@ -1,5 +1,6 @@
-import {React, useState, useEffect, useCallback} from 'react'
+import {React, useState, useEffect} from 'react'
 import { HashRouter, Route, Routes } from 'react-router-dom'
+import axios from 'axios'
 //GlobalBodyCSS
 import {GlobalMainBody} from './AppElements.js'
 //Components
@@ -13,14 +14,26 @@ import ProjectPage from './pages/projects'
 import ContactPage from './pages/contact'
 
 function App() {
+  // Data
+  const [data,setData]=useState([]);
+
+  useEffect(() =>{
+    axios.get("https://lout8.github.io/personal-website-data/data.json")
+    .then(res => {
+      setData(res.data)
+    })
+    .catch(err =>{
+      console.log(err)
+    })
+  }, [])
+
+
   // Sidebar Button
   const[isOpen, setIsOpen] = useState(false)
 
   const toggle = () => {
     setIsOpen(!isOpen)
   }
-
-
   
   return (
       <HashRouter>
@@ -30,10 +43,10 @@ function App() {
           <Sidebar isOpen={isOpen} toggle={toggle}/>
         </header>
         <Routes>
-          <Route exact path="/" element={<HomePage/>}/>
-          <Route exact path="/about" element={<AboutPage/>}/>
-          <Route exact path="/projects" element={<ProjectPage/>}/>
-          <Route exact path="/contact" element={<ContactPage/>}/>
+          <Route exact path="/" element={<HomePage data={data}/>}/>
+          <Route exact path="/about" element={<AboutPage data={data}/>}/>
+          <Route exact path="/projects" element={<ProjectPage data={data}/>}/>
+          <Route exact path="/contact" element={<ContactPage data={data}/>}/>
         </Routes>
         <footer><Footer/></footer>
       </HashRouter>

@@ -10,7 +10,7 @@ const Footer = () => {
               <FooterMenu>
                   <FooterItem><FooterLinks to="/about">about</FooterLinks></FooterItem>
                   <FooterItem><FooterLinks to="/projects">projects</FooterLinks></FooterItem>
-                  <FooterItem><FooterLinks to="contact">contact</FooterLinks></FooterItem>
+                  <FooterItem><FooterLinks to="/contact">contact</FooterLinks></FooterItem>
               </FooterMenu>
           </FooterContainer>
       </FooterMain>

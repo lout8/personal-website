@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
-
-export const Contact = styled.div`
+export const Home = styled.div`
     display: flex;
     min-width: 100%;
     min-height: 70vh;
@@ -20,7 +20,7 @@ export const Contact = styled.div`
         padding: 0 25px;
     }
 `
-export const ContactContainer = styled.div`
+export const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -29,7 +29,7 @@ export const ContactContainer = styled.div`
     width: 100%;
     height: 70vh;
 `
-export const ContactH = styled.h1`
+export const HomeH = styled.h1`
     display: flex;
     color: #EBEBEB;
     font-size: 3.5rem;
@@ -41,7 +41,7 @@ export const ContactH = styled.h1`
         font-size: 2.5rem;
     }
 `
-export const ContactP = styled.p`
+export const HomeP = styled.p`
     display: flex;
     text-align: center;
     color: #B5B5B5;
@@ -68,17 +68,18 @@ export const ContactP = styled.p`
         padding: 25px 0;
     }
 `
-export const ContactBtn = styled.a`
+export const HomeBtn = styled(NavLink)`
     display: flex;
     background: rgba(0, 0, 0, 0.2);
-    border: 2px solid #D19EEB;
+    border: 1px solid #D19EEB;
+    border-radius: 2%;
     color: #D19EEB;
     padding: 15px;
     font-weight: bold;
-    background: #20262E;
     cursor: pointer;
     text-decoration: none;
     font-size: 1rem;
+
 
     :hover{
         opacity: 0.5;
@@ -94,5 +95,13 @@ export const ContactBtn = styled.a`
     @media only screen and (max-width: 768px) {
         font-size: 0.8rem;
     }
+
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
 
 `
