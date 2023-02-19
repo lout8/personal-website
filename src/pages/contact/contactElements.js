@@ -75,7 +75,6 @@ export const ContactBtn = styled.a`
     color: #D19EEB;
     padding: 15px;
     font-weight: bold;
-    background: #20262E;
     cursor: pointer;
     text-decoration: none;
     font-size: 1rem;

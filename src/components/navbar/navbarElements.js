@@ -55,6 +55,7 @@ export const NavLogo = styled(NavLink)`
   text-transform: uppercase;
   text-decoration: none;
   color: #D19EEB;
+  /* font-family: 'Courier New', Courier, monospace; */
 
   ${SidebarContainer}{
     max-height: ${({ isOpen }) => (isOpen ? '0' : '400px')};
