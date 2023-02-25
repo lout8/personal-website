@@ -92,18 +92,13 @@ Use the `BLANK_README.md` to get started.
 ### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-
-<!-- <div align="start" >  -->
   
-  [![React][React.js]][React-url]
-  [![JavaScript][JavaScript]][JavaScript-url]
-  [![HTML5][HTML5]][HTML5-url]
-  [![CSS3][CSS3]][CSS3-url]
-  [![Styled-components][Styled-components]][Styled-components-url]
+  * [![React][React.js]][React-url] 
+  * [![JavaScript][JavaScript]][JavaScript-url]
+  * [![HTML5][HTML5]][HTML5-url]
+  * [![CSS3][CSS3]][CSS3-url]
+  * [![Styled-components][Styled-components]][Styled-components-url]
   
-  
-<!-- </div> -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -185,9 +180,9 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [React-url]: https://reactjs.org/
 [JavaScript]: https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=JavaScript&logoColor=F0DB4F
 [JavaScript-url]: https://www.javascript.com
-[HTML5]: https://img.shields.io/badge/HTML-000000?style=for-the-badge&logo=html5&logoColor=e34c26
-[HTML5-url]: 
-[CSS3]: https://img.shields.io/badge/CSS-000000?style=for-the-badge&logo=css3&logoColor=264de4
-[CSS3-url]:
-[Styled-components]: https://img.shields.io/badge/styled%20components-000000?style=for-the-badge&logo=styled-components&logoColor=F0DB4F
+[HTML5]: https://img.shields.io/badge/HTML-e34c26?style=for-the-badge&logo=html5&logoColor=000000
+[HTML5-url]: https://www.w3.org/html/
+[CSS3]: https://img.shields.io/badge/CSS-264de4?style=for-the-badge&logo=css3&logoColor=000000
+[CSS3-url]: https://www.w3.org/Style/CSS/Overview.en.html
+[Styled-components]: https://img.shields.io/badge/styled%20components-F0DB4F?style=for-the-badge&logo=styled-components&logoColor=000000
 [Styled-components-url]: https://styled-components.com
