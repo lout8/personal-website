@@ -93,14 +93,17 @@ Use the `BLANK_README.md` to get started.
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+
+<!-- <div align="start" >  -->
+  
+  [![React][React.js]][React-url]
+  [![JavaScript][JavaScript]][JavaScript-url]
+  [![HTML5][HTML5]][HTML5-url]
+  [![CSS3][CSS3]][CSS3-url]
+  [![Styled-components][Styled-components]][Styled-components-url]
+  
+  
+<!-- </div> -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -176,3 +179,15 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
+
+
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[JavaScript]: https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=JavaScript&logoColor=F0DB4F
+[JavaScript-url]: https://www.javascript.com
+[HTML5]: https://img.shields.io/badge/HTML-000000?style=for-the-badge&logo=html5&logoColor=e34c26
+[HTML5-url]: 
+[CSS3]: https://img.shields.io/badge/CSS-000000?style=for-the-badge&logo=css3&logoColor=264de4
+[CSS3-url]:
+[Styled-components]: https://img.shields.io/badge/styled%20components-000000?style=for-the-badge&logo=styled-components&logoColor=F0DB4F
+[Styled-components-url]: https://styled-components.com
