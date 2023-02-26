@@ -29,7 +29,7 @@
     A Personal Website for showing my work
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Website</a>
+    <a href="https://elissaiosloutos.com">View Website</a>
     ·
     <a href="https://github.com/lout8/personal-website/issues">Report Bug</a>
     ·
@@ -149,7 +149,6 @@ Project Link: [https://github.com/lout8/personal-website](https://github.com/lou
 [license-url]: https://github.com/lout8/personal-website/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/elissaios-loutos-695024227/
-
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
