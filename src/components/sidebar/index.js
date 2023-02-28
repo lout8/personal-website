@@ -12,8 +12,8 @@ const Sidebar = ({toggle, isOpen}) => {
           <SidebarItem><SidebarLink to="/projects">projects</SidebarLink></SidebarItem>
           <SidebarItem><SidebarLink to="/contact">contact</SidebarLink></SidebarItem>
           <SidebarItemMedia>
-            <SidebarMedia href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin/></SidebarMedia>
-            <SidebarMedia href="https://www.github.com" target="_blank" rel="noopener noreferrer"><FaGithub/></SidebarMedia>
+            <SidebarMedia href="https://www.linkedin.com/in/elissaios-loutos-695024227" target="_blank" rel="noopener noreferrer"><FaLinkedin/></SidebarMedia>
+            <SidebarMedia href="https://github.com/lout8" target="_blank" rel="noopener noreferrer"><FaGithub/></SidebarMedia>
           </SidebarItemMedia>
         </SidebarMenu>     
       </SidebarContainer>
