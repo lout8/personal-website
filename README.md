@@ -117,7 +117,11 @@ This is an example of how to list things you need to use the software and how to
    
    example: cd ./Desktop/personal-website
    ```
-4. Local run
+4. Install npm locally
+   ```sh
+   npm install
+   ```
+5. Local run
    ```js
    npm start
    ```
