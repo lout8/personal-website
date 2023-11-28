@@ -23,7 +23,7 @@
     <img src="public/logo512.png" alt="Logo" width="192" height="192">
   </a>
 
-  <h3 align="center">Portfolio</h3>
+  <h3 align="center">Personal Website</h3>
 
   <p align="center">
     A Personal Website for showing my work
