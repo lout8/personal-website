@@ -18,7 +18,7 @@ function App() {
   const [data,setData]=useState([]);
 
   useEffect(() =>{
-    axios.get("https://lout8.github.io/personal-website-data/data.json")
+    axios.get("https://dulcet-chimera-7feb47.netlify.app/data.json")
     .then(res => {
       setData(res.data)
     })
